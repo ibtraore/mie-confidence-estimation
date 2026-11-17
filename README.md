@@ -12,6 +12,27 @@ For further information regarding CDE.AI project, please visit the following lin
 
 ![Alt text](img/Graphical_Abstract.png)
 
+### Confidence estimation methods
+
+We collect token-probabilities from the model’s generation to compute:
+
+- **Sequence Probability (SP)** : measures the joint probability of all tokens in the generated response.
+- **Length-Normalized Sequence Probability (LNSP)** : computed as the geometric mean of the token probabilities.
+- **Minimum Token Probability (MTP)** : uses the lowest token probability within the generated sequence as a confidence score.
+- **Probability Margin (PM)** : measures the difference between the probabilities of the most likely and second most likely tokens at each position.
+- **Average Top-K Token Negentropy (ATN@K)** : computes the entropy of the top-K token distribution at each generation step and transforms it into a confidence score by computing the average normalized token negentropy across all positions.
+- **Minimum Top-K Token Negentropy (MTN@K)** : uses the minimum normalized token negentropy across all token positions as the confidence score.
+- **Verbalized Confidence (VC)** : is a self-checking approach in which the model is prompted to provide both its answer and an explicit confidence assessment of the correctness of its response. In our study, the model is prompted to express its confidence using four ordered levels: `very low, low, high, and very high`. 
+
+### Confidence evaluation metrics
+
+To assess the quality of confidence estimates, several complementary metrics were used:
+
+- **AUROC (Area Under the Receiver Operating Characteristic Curve)** : measures the ability of confidence scores to distinguish between correct and incorrect responses.
+- **AUPRC (Area Under the Precision–Recall Curve)** : evaluates the ability of an uncertainty score to distinguish between correct and incorrect responses using the precision–recall curve.
+- **AUARC (Area Under the Accuracy–Rejection Curve)** : evaluates the ability of an uncertainty estimation method to identify correct predictions for retention while rejecting uncertain predictions.
+- **Expected Calibration Error (ECE)** : assesses the alignment between a model's estimated confidence and its actual accuracy.
+
 ---
 ## Repo content
 The structure of the repo is as the following :
