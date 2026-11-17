@@ -51,7 +51,7 @@ You can follow the steps below to quickly get up and running with experimentatio
    pip install -r requirements.txt
    ```
 
-4. **Set Up the API URL (and API Key for Online Models))**
+4. **Set Up the API URL (and API Key for Online Models)**
 
    In the [`config`](src/config.py) file, you need to specify the `base_url` (and the `api_key` if you are using online models).
 
