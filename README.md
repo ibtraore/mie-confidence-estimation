@@ -10,7 +10,7 @@ For further information regarding CDE.AI project, please visit the following lin
 ---
 ## Overview of our study on confidence estimation and evaluation.
 
-![Alt text](img/Graphical_Abastract.pdf)
+![Alt text](img/Graphical_Abstract.png)
 
 ---
 ## Repo content
