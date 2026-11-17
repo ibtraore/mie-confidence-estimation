@@ -14,7 +14,7 @@ For further information regarding CDE.AI project, please visit the following lin
 
 ### Confidence estimation methods
 
-We collect token-probabilities from the model’s generation to compute:
+We estimation LLM confidence using:
 
 - **Sequence Probability (SP)** : measures the joint probability of all tokens in the generated response.
 - **Length-Normalized Sequence Probability (LNSP)** : computed as the geometric mean of the token probabilities.
