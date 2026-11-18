@@ -18,25 +18,25 @@ We evaluate confidence estimation methods across four distinct clinical informat
 
 #### Task 1: Clinical Acronym Sense Disambiguation
 
-For Task 1, we use the original annotations from the Clinical Acronym Sense Inventory (CASI) dataset, as described in the corresponding paper. As is common with clinical annotation datasets, the label set contains some noise. Therefore, rather than evaluating the entire dataset, we focus on a cleaner subset. For consistency, we use the subset obtained through the filtering procedure described in *"Zero-Shot Clinical Acronym Expansion via Latent Meaning Cells"*.
+For Task 1, we use the original annotations from the [Clinical Acronym Sense Inventory (CASI)](https://conservancy.umn.edu/handle/11299/137703) dataset, as described in the corresponding paper. As is common with clinical annotation datasets, the label set contains some noise. Therefore, rather than evaluating the entire dataset, we focus on a cleaner subset. For consistency, we use the subset obtained through the filtering procedure described in ["Zero-Shot Clinical Acronym Expansion via Latent Meaning Cells"](https://arxiv.org/pdf/2010.02010).
 
 This task consists of identifying and disambiguating clinical abbreviations in clinical notes by determining their intended meanings in context.
 
 #### Task 2: Coreference Resolution
 
-For Task 2, we use annotations from the corresponding paper, which contains 105 snippets drawn from the CASI dataset. Each example is annotated with a singular pronoun and its corresponding noun phrase antecedent (or antecedents).
+For Task 2, we use annotations from [this paper](https://arxiv.org/pdf/2205.12689), which contains 105 snippets drawn from the CASI dataset. Each example is annotated with a singular pronoun and its corresponding noun phrase antecedent (or antecedents).
 
 The task aims to identify and group textual mentions that refer to the same underlying entity, such as a patient, a family member, or a medical concept.
 
 #### Task 3: Medication Status Extraction
 
-For Task 3, we use annotations from the corresponding paper, which contains 105 snippets drawn from the CASI dataset.
+For Task 3, we use annotations from [this paper](https://arxiv.org/pdf/2205.12689), which contains 105 snippets drawn from the CASI dataset.
 
 This task consists of identifying medication mentions and assigning a status to each medication. Each medication is classified into one of three categories: **active**, **discontinued**, or **neither**.
 
 #### Task 4: Medication Attribute Extraction
 
-For Task 4, we use annotations from the corresponding paper, which contains 105 snippets drawn from the CASI dataset.
+For Task 4, we use annotations from [this paper](https://arxiv.org/pdf/2205.12689), which contains 105 snippets drawn from the CASI dataset.
 
 For each medication mention, the extraction schema includes the following attributes:
 
