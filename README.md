@@ -12,6 +12,41 @@ For further information regarding CDE.AI project, please visit the following lin
 
 ![Alt text](img/Graphical_Abstract.png)
 
+### Datasets and Tasks
+
+We evaluate confidence estimation methods across four distinct clinical information extraction tasks.
+
+#### Task 1: Clinical Acronym Sense Disambiguation
+
+For Task 1, we use the original annotations from the Clinical Acronym Sense Inventory (CASI) dataset, as described in the corresponding paper. As is common with clinical annotation datasets, the label set contains some noise. Therefore, rather than evaluating the entire dataset, we focus on a cleaner subset. For consistency, we use the subset obtained through the filtering procedure described in *"Zero-Shot Clinical Acronym Expansion via Latent Meaning Cells"*.
+
+This task consists of identifying and disambiguating clinical abbreviations in clinical notes by determining their intended meanings in context.
+
+#### Task 2: Coreference Resolution
+
+For Task 2, we use annotations from the corresponding paper, which contains 105 snippets drawn from the CASI dataset. Each example is annotated with a singular pronoun and its corresponding noun phrase antecedent (or antecedents).
+
+The task aims to identify and group textual mentions that refer to the same underlying entity, such as a patient, a family member, or a medical concept.
+
+#### Task 3: Medication Status Extraction
+
+For Task 3, we use annotations from the corresponding paper, which contains 105 snippets drawn from the CASI dataset.
+
+This task consists of identifying medication mentions and assigning a status to each medication. Each medication is classified into one of three categories: **active**, **discontinued**, or **neither**.
+
+#### Task 4: Medication Attribute Extraction
+
+For Task 4, we use annotations from the corresponding paper, which contains 105 snippets drawn from the CASI dataset.
+
+For each medication mention, the extraction schema includes the following attributes:
+
+- **Medication name**
+- **Dosage**
+- **Route of administration**
+- **Frequency**
+- **Duration of administration**
+- **Indication/reason for administration**
+
 ### Confidence estimation methods
 
 We estimate LLM confidence using:
